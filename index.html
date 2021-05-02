@@ -22,10 +22,18 @@
         <div class="row">
           <div class="col-xs-12">
             <h1>Automatic Tourist Planner</h1>
-            <p>Description</p>
+            <p class='description'>This application aims to generate a personalised timetable
+               automatically. After agreeing with the terms and conditions and
+               permitting us to view your Instagram photos, this app will present
+               you with a timeline for a holiday in Malta. There is only a 50%
+               chance that the timetable is personalised. After that, rate the
+               result on a scale of 1 to 5. </p>
             <br />
             <button id="submit" onclick="myFunction()" class="btn btn-default btn-lg" title=""
-              >Sign in with Instagram</button>
+              >
+              <div>
+ Log in with Instagram <i class="fa fa-instagram"></i></div>
+            </button>
           </div>
           <div>
               <input
@@ -36,6 +44,7 @@
                   I Agree <a href="https://www.privacypolicies.com/live/2e9efe90-547f-47c4-88aa-0adc0f0f334f">Terms & Coditions<a>
             </p>
           </div>
+          <h6 class="warning" id="warning">Please accept Terms & Conditions first!</h6>
         </div>
       </div>
     </div>
@@ -47,7 +56,8 @@
           var checkBox = document.getElementById("myCheckbox");
 
           if (checkBox.checked == false){
-              alert("Please accept Terms & Conditions first.")
+              x = document.getElementById('warning');
+              x.style.display='inline-block';
           }else{
              window.location.href = "https://localhost:8888/auth/";
 

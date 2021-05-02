@@ -5133,3 +5133,15 @@ input.myCheckbox {
   height: 20px;
   width: 20px;
 }
+
+.warning{
+    display:inline-block;
+    display:none;
+  padding-top: 15px;
+    color:#eed202;
+}
+
+.description{
+    font-size:1.2em;
+}
+
