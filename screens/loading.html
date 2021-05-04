@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="description" name="description" />
+
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Automatic Tourist Planner</title>
+
+    <link href="../style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div
+      class="hero-full-container background-image-container white-text-container"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>Loading...</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="myGrid" class="container">
+      <div class="wrapper">
+        <div class="progress-bar">
+          <span class="progress-bar-fill" style="width: 70%;"></span>
+          <div id="loading-text">Retrieving photos</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function myFunction() {
+        var checkBox = document.getElementById("myCheckbox");
+
+        if (checkBox.checked == false) {
+          x = document.getElementById("warning");
+          x.style.display = "inline-block";
+        } else {
+          window.location.href = "https://liamattard.xyz:8888/auth/";
+        }
+      }
+    </script>
+  </body>
+</html>
+
