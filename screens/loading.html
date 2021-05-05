@@ -43,8 +43,14 @@
     if(code != null){
     console.log("aa");
 
-    fetch('https://liamattard.xyz:8888/getToken/?code='+ code).then(response => response.text()).then(data => user_id = data);
-    console.log(user_id);
+    fetch('https://liamattard.xyz:8888/getToken/?code='+
+        code).then(response => response.text()).then(data =>
+            {
+                user_id = data;
+                console.log(data);
+                let checkBox = document.getElementById("loadingText");
+                checkbox.innerHTML = "Gathering preferences from your profile";
+            });
 	    
 
         }
