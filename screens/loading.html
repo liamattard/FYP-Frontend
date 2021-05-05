@@ -38,15 +38,14 @@
 
     const params = new URLSearchParams(window.location.search);
     var code = params.get("code");
+    var user_id = 0;
 
     if(code != null){
     console.log("aa");
 
-    fetch('https://liamattard.xyz:8888/getToken?code='+ code).then(function (response) {
-        console.log('success!', response);
-    }).catch(function (err) {
-        console.warn('Something went wrong.', err);
-    });
+    fetch('https://liamattard.xyz:8888/getToken/?code='+ code).then(response => response.text()).then(data => user_id = data);
+    console.log(user_id);
+	    
 
         }
 
