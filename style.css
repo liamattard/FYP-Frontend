@@ -5167,6 +5167,13 @@ input.myCheckbox {
     text-align:center;
 }
 
+#centerLoading{
+
+    margin-top:10%;
+    text-align:center;
+    left:48%;
+}
+
 .progress-bar-fill {
     display: block;
     height: 22px;
@@ -5174,4 +5181,34 @@ input.myCheckbox {
     border-radius: 3px;
 
     transition: width 500ms ease-in-out;
+}
+
+
+.loading2
+{
+  /*position: absolute;*/
+  top: 120px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 4px dashed white;
+  animation: spinner 2s infinite;
+}
+
+
+@keyframes spinner { 
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }

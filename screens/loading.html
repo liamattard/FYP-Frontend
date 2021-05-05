@@ -23,32 +23,33 @@
     >
       <div style="height: 30%;" class="container">
         <div class="row">
-          <div class="col-xs-12">
-            <h1>Loading...</h1>
+          <div id="myGrid" class="col-xs-12">
+            <h1 style="text-align: center;">Loading</h1>
+
+            <div id="centerLoading" class="loading2"></div>
+            <p id="loadingText"> Accessing Photos</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="myGrid" class="container">
-      <div class="wrapper">
-        <div class="progress-bar">
-          <span class="progress-bar-fill" style="width: 70%;"></span>
-          <div id="loading-text">Retrieving photos</div>
-        </div>
-      </div>
-    </div>
-    <script>
-      function myFunction() {
-        var checkBox = document.getElementById("myCheckbox");
 
-        if (checkBox.checked == false) {
-          x = document.getElementById("warning");
-          x.style.display = "inline-block";
-        } else {
-          window.location.href = "https://liamattard.xyz:8888/auth/";
+  <script>
+
+    const params = new URLSearchParams(window.location.search);
+    var code = params.get("code");
+
+    if(code != null){
+    console.log("aa");
+
+    fetch('https://liamattard.xyz:8888/getToken?code='+ code).then(function (response) {
+        console.log('success!', response);
+    }).catch(function (err) {
+        console.warn('Something went wrong.', err);
+    });
+
         }
-      }
-    </script>
-  </body>
+
+  </script>
+
 </html>
