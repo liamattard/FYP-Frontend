@@ -27,7 +27,7 @@
             <h1 style="text-align: center;">Loading</h1>
 
             <div id="centerLoading" class="loading2"></div>
-            <p id="loadingText"> Accessing Photos</p>
+            <p id="loadingText"> (1/3) Accessing Photos</p>
           </div>
         </div>
       </div>
@@ -48,9 +48,19 @@
             {
                 user_id = data;
                 console.log(data);
-                let checkBox = document.getElementById("loadingText");
-                checkbox.innerHTML = "Gathering preferences from your profile";
-            });
+                let loadingText= document.getElementById("loadingText");
+                loadingText.innerHTML = " (2/3)Gathering preferences from your profile";
+
+
+                fetch('https://liamattard.xyz:8888/classifyPhotos?id='+
+                    user_id).then(response => response.text()).then(data =>
+                        {
+                            let loadingText= document.getElementById("loadingText");
+                            loadingText.innerHTML = " (3/3)Generating Timetable";
+                            console.log(data);
+                        });
+
+                });
 	    
 
         }
