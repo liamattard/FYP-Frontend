@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="description" name="description" />
+
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Automatic Tourist Planner</title>
+
+    <link href="../style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div
+      class="hero-full-container background-image-container white-text-container"
+    >
+      <div class="container" style="height: 500px;">
+        <div class="row">
+          <div class="col-xs-12">
+            <h3 style="margin-top: 200px;">Step 2:</h3>
+            <button
+              id="submit"
+              onclick="myFunction()"
+              class="btn btn-default btn-lg"
+              title=""
+            >
+              <div>Connect to Facebook <i class="fa fa-facebook"></i></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      var user_id = params.get("id");
+
+      if (user_id == null) {
+        window.location.href = "https://www.touristplanner.xyz";
+      }
+
+      function myFunction() {
+        if (user_id != null) {
+          window.location.href =
+            "https://liamattard.xyz:8888/fbAuth?id=" + user_id;
+        }
+      }
+    </script>
+  </body>
+  /html>
+</html>
