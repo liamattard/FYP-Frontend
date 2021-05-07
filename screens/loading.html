@@ -27,7 +27,7 @@
             <h1 style="text-align: center;">Loading</h1>
 
             <div id="centerLoading" class="loading2"></div>
-            <p id="loadingText"> (1/3) Accessing Photos</p>
+            <p id="loadingText"> (1/3) Gathering Instagram preferences...</p>
           </div>
         </div>
       </div>
@@ -37,30 +37,26 @@
   <script>
 
     const params = new URLSearchParams(window.location.search);
-    var code = params.get("code");
-    var user_id = 0;
+    var id = params.get("id");
 
-    if(code != null){
-    console.log("aa");
+    if(code==null){
+         window.location.href = "https://www.touristplanner.xyz";
+    }else{
 
-    fetch('https://liamattard.xyz:8888/getToken/?code='+
-        code).then(response => response.text()).then(data =>
+
+
+    fetch('https://localhost:8888/classifyPhotos?id='+
+        user_id).then(response => response.text()).then(data =>
             {
-                user_id = data;
-                console.log(data);
                 let loadingText= document.getElementById("loadingText");
-                loadingText.innerHTML = " (2/3)Gathering preferences from your profile";
+                loadingText.innerHTML = " (2/3)Gathering Facebook Preferences";
+                alert("Done for now")
 
+                <!--let loadingText= document.getElementById("loadingText");-->
+                <!--loadingText.innerHTML = " (3/3)Generating Timetable";-->
+                <!--console.log(data);-->
+            });
 
-                fetch('https://liamattard.xyz:8888/classifyPhotos?id='+
-                    user_id).then(response => response.text()).then(data =>
-                        {
-                            let loadingText= document.getElementById("loadingText");
-                            loadingText.innerHTML = " (3/3)Generating Timetable";
-                            console.log(data);
-                        });
-
-                });
 	    
 
         }
