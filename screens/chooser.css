@@ -1,0 +1,39 @@
+.slidecontainer {
+  height: 100px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  border-radius: 20px;
+}
+
+#hello:hover {
+  position: relative;
+}
+
+#hello {
+  font-size: 30px;
+  color: black;
+}
+
+#submit {
+  margin-top: 80px;
+}
+
+/*button {*/
+
+/*height: 40px;*/
+
+/*padding: 1.5em auto;*/
+
+/*margin: 1em auto;*/
+
+/*background-color: #feb1c0;*/
+
+/*border: none;*/
+
+/*border-radius: 3px;*/
+
+/*transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);*/
+
+/*}*/
