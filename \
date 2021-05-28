@@ -72,6 +72,3 @@ body {
   text-align: center;
   padding: 30px;
 }
-/*.days_content {*/
-/*[>text-align: center;<]*/
-/*}*/
