@@ -122,6 +122,8 @@ textarea {
   margin: 0;
 }
 button {
+    margin-top:10px;
+  margin-left: 20px;
   overflow: visible;
 }
 button,

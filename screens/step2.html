@@ -27,11 +27,19 @@
             <h3 style="margin-top: 200px;">Step 2:</h3>
             <button
               id="submit"
-              onclick="myFunction()"
+              onclick="instaFunction()"
               class="btn btn-default btn-lg"
               title=""
             >
-              <div>Connect to Facebook <i class="fa fa-facebook"></i></div>
+              <div>Connect with Instagram <i class="fa fa-Instagram"></i></div>
+            </button>
+            <button
+              id="submit"
+              onclick="noInstaFunction()"
+              class="btn btn-default btn-lg"
+              title=""
+            >
+              <div>I don't have Instagram <span>&#9785;</span></div>
             </button>
           </div>
         </div>
@@ -46,10 +54,17 @@
         window.location.href = "https://www.touristplanner.xyz";
       }
 
-      function myFunction() {
+      function instaFunction() {
         if (user_id != null) {
           window.location.href =
-            "https://liamattard.xyz:8888/fbAuth/?id=" + user_id;
+            "https://liamattard.xyz:8888/InstaAuth/?id=" + user_id;
+        }
+      }
+
+      function noInstaFunction() {
+        if (user_id != null) {
+          window.location.href =
+            "https://liamattard.xyz:8888/screens/loading.html?withInsta=0";
         }
       }
     </script>
