@@ -62,67 +62,18 @@
           id="submit"
           class="btn btn-default btn-lg"
           title=""
+          onclick="letsGo()"
         >
           <div>Generate my activity plan!</div>
         </button>
+        <img
+          id="loading"
+          style="width: 60px; display: none;"
+          src="https://www.superiorlawncareusa.com/wp-content/uploads/2020/05/loading-gif-png-5.gif"
+        />
       </div>
     </div>
 
-    <script>
-      var slider = document.getElementById("slider");
-      var output = document.getElementById("moderation");
-      output.innerHTML = slider.value;
-
-      if (output.innerHTML == 1) {
-        output.innerHTML = "Relaxed activity plan, not a lot of activities";
-      } else if (output.innerHTML == 2) {
-        output.innerHTML = "Moderate activity plan";
-      } else if (output.innerHTML == 3) {
-        output.innerHTML = "Busy activity plan, a lot of activities";
-      }
-
-      slider.oninput = function () {
-        output.innerHTML = Math.round(this.value);
-        if (output.innerHTML == 1) {
-          output.innerHTML = "Relaxed activity plan, not a lot of activities";
-        } else if (output.innerHTML == 2) {
-          output.innerHTML = "Moderate activity plan";
-        } else if (output.innerHTML == 3) {
-          output.innerHTML = "Busy activity plan, a lot of activities";
-        }
-      };
-
-      slider.onmouseup = function () {
-        slider.value = Math.round(this.value);
-        if (slider.value == 1) {
-          output.innerHTML = "Relaxed activity plan, not a lot of activities";
-        } else if (slider.value == 2) {
-          output.innerHTML = "Moderate activity plan";
-        } else if (slider.value == 3) {
-          output.innerHTML = "Busy activity plan, a lot of activities";
-        }
-      };
-
-      slider.ontouchend = function () {
-        slider.value = Math.round(this.value);
-      };
-
-      var slider_two = document.getElementById("slider_two");
-      var output_two = document.getElementById("days");
-      output_two.innerHTML = slider_two.value;
-
-      slider_two.oninput = function () {
-        output_two.innerHTML = Math.round(this.value);
-      };
-
-      slider_two.onmouseup = function () {
-        slider_two.value = Math.round(this.value);
-      };
-
-      slider_two.ontouchend = function () {
-        slider_two.value = Math.round(this.value);
-      };
-    </script>
+    <script src="chooser.js"></script>
   </body>
 </html>
-
