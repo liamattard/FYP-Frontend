@@ -89,7 +89,7 @@ function switch_timetable(evt, timetable_name, is_day) {
   evt.currentTarget.className += " active";
 }
 
-fetch("http://www.touristplanner.xyz/getItineraries?id=" + id)
+fetch("http://liamattard.xyz:8888/getItineraries?id=" + id)
   .then((response) => response.json())
   .then((data) => {
     console.log(data);

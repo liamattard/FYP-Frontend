@@ -79,7 +79,8 @@ function letsGo() {
       }
     })
     .then((data) => {
-      let final_site = "https://liamattard.xyz:8888/screens/timetable.html?id=";
+      let final_site =
+        "https://www.touristplanner.xyz/screens/timetable.html?id=";
       final_site += id;
       final_site += "&moderation=" + slider.value;
       final_site += "&days=" + slider_two.value;
