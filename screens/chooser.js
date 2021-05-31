@@ -79,8 +79,10 @@ function letsGo() {
       }
     })
     .then((data) => {
-      window.location.replace(
-        "file:///home/liam/Documents/fyp/FYP-Frontend/screens/timetable.html?id=159"
-      );
+      let final_site = "https://liamattard.xyz:8888/screens/timetable.html?id=";
+      final_site += id;
+      final_site += "&moderation=" + slider.value;
+      final_site += "&days=" + slider_two.value;
+      window.location.replace(final_site);
     });
 }

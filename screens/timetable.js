@@ -1,8 +1,9 @@
 const params = new URLSearchParams(window.location.search);
+var id = params.get("id");
 var moderation = params.get("moderation");
 var days = params.get("days");
 
-if (moderation == null || days == null) {
+if (moderation == null || days == null || id == null) {
   window.location.href = "https://www.touristplanner.xyz";
 }
 
@@ -88,12 +89,7 @@ function switch_timetable(evt, timetable_name, is_day) {
   evt.currentTarget.className += " active";
 }
 
-fetch(
-  "http://localhost:8080/generate_itineraries?moderation=" +
-    moderation +
-    "&days=" +
-    days
-)
+fetch("http://liamattard.xyz:8888/getItineraries?id=" + id)
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
