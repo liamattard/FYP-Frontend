@@ -1,3 +1,35 @@
+const new_slider = document.getElementById("slider");
+new_slider.style.setProperty("--val", +new_slider.value);
+new_slider.style.setProperty("--max", +new_slider.max);
+new_slider.style.setProperty("--min", +new_slider.min);
+
+document.documentElement.classList.add("js");
+
+new_slider.addEventListener(
+  "input",
+  (e) => {
+    new_slider.style.setProperty("--val", +new_slider.value);
+    console.log(new_slider.value);
+  },
+  false
+);
+
+const new_slider_two = document.getElementById("slider_two");
+new_slider_two.style.setProperty("--val", +new_slider_two.value);
+new_slider_two.style.setProperty("--max", +new_slider_two.max);
+new_slider_two.style.setProperty("--min", +new_slider_two.min);
+
+document.documentElement.classList.add("js");
+
+new_slider_two.addEventListener(
+  "input",
+  (e) => {
+    new_slider_two.style.setProperty("--val", +new_slider_two.value);
+    console.log(new_slider_two.value);
+  },
+  false
+);
+
 const params = new URLSearchParams(window.location.search);
 var id = params.get("id");
 if (id == null) {
@@ -6,37 +38,9 @@ if (id == null) {
 }
 
 var slider = document.getElementById("slider");
-var output = document.getElementById("moderation");
-output.innerHTML = slider.value;
-
-if (output.innerHTML == 1) {
-  output.innerHTML = "Relaxed activity plan, not a lot of activities";
-} else if (output.innerHTML == 2) {
-  output.innerHTML = "Moderate activity plan";
-} else if (output.innerHTML == 3) {
-  output.innerHTML = "Busy activity plan, a lot of activities";
-}
-
-slider.oninput = function () {
-  output.innerHTML = Math.round(this.value);
-  if (output.innerHTML == 1) {
-    output.innerHTML = "Relaxed activity plan, not a lot of activities";
-  } else if (output.innerHTML == 2) {
-    output.innerHTML = "Moderate activity plan";
-  } else if (output.innerHTML == 3) {
-    output.innerHTML = "Busy activity plan, a lot of activities";
-  }
-};
 
 slider.onmouseup = function () {
   slider.value = Math.round(this.value);
-  if (slider.value == 1) {
-    output.innerHTML = "Relaxed activity plan, not a lot of activities";
-  } else if (slider.value == 2) {
-    output.innerHTML = "Moderate activity plan";
-  } else if (slider.value == 3) {
-    output.innerHTML = "Busy activity plan, a lot of activities";
-  }
 };
 
 slider.ontouchend = function () {
@@ -44,12 +48,6 @@ slider.ontouchend = function () {
 };
 
 var slider_two = document.getElementById("slider_two");
-var output_two = document.getElementById("days");
-output_two.innerHTML = slider_two.value;
-
-slider_two.oninput = function () {
-  output_two.innerHTML = Math.round(this.value);
-};
 
 slider_two.onmouseup = function () {
   slider_two.value = Math.round(this.value);
