@@ -35,11 +35,15 @@ function add_days(days_tab, plan) {
     for (let j = 0; j < plan[i - 1].length; j++) {
       place = document.createElement("div");
       place.className = "place";
-      place.innerHTML = plan[i - 1][j];
+      place.innerHTML = plan[i - 1][j][0];
+      day_content.appendChild(getEmoji(plan[i - 1][j][1]));
       day_content.appendChild(place);
       arrow = document.createElement("div");
-      arrow.innerHTML = "↓";
-      day_content.appendChild(arrow);
+      if (j != plan[i - 1].length - 1) {
+        arrow.innerHTML = "↓";
+        arrow.style.fontSize = "30px";
+        day_content.appendChild(arrow);
+      }
     }
     document.body.appendChild(day_content);
 
@@ -49,6 +53,45 @@ function add_days(days_tab, plan) {
     };
     days_tab.appendChild(day_button);
   }
+}
+
+function getEmoji(emojiString) {
+  emoji = document.createElement("img");
+  emoji.style.width = "30px";
+
+  if (emojiString == "cafe") {
+    emoji.src =
+      "https://images.emojiterra.com/google/android-pie/512px/1f96a.png";
+  }
+  if (emojiString == "shopping") {
+    emoji.src =
+      "https://images.emojiterra.com/google/android-10/512px/1f457.png";
+  }
+  if (emojiString == "nature") {
+    emoji.src =
+      "https://images.emojiterra.com/google/android-10/512px/1f333.png";
+  }
+  if (emojiString == "restaurant") {
+    emoji.src =
+      "http://cdn.shopify.com/s/files/1/1061/1924/products/Cheese_Burger_Emoji_grande.png?v=1571606035";
+  }
+  if (emojiString == "museums") {
+    emoji.src = "https://img.icons8.com/emoji/452/round-pushpin-emoji.png";
+  }
+  if (emojiString == "beach") {
+    emoji.src =
+      "https://images.emojiterra.com/google/android-10/512px/1f3d6.png";
+  }
+  if (emojiString == "club") {
+    emoji.src =
+      "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/man-dancing_1f57a.png";
+  }
+  if (emojiString == "bar") {
+    emoji.src =
+      "http://cdn.shopify.com/s/files/1/1061/1924/products/Margarita_Cocktail_Emoji_grande.png?v=1571606035";
+  }
+
+  return emoji;
 }
 
 function switch_timetable(evt, timetable_name, is_day) {
@@ -105,4 +148,19 @@ fetch("https://liamattard.xyz:8888/getItineraries?id=" + id)
     add_days(days_tab_one, data);
     add_days(days_tab_two, data);
     document.getElementById("first").click();
+
+    buttonHolder = document.createElement("div");
+
+    buttonOne = document.createElement("button");
+    buttonOne.id = "timetableButton";
+    buttonOne.innerHTML = "I prefer timetable 1";
+
+    buttonTwo = document.createElement("button");
+    buttonTwo.id = "timetableButton";
+    buttonTwo.innerHTML = "I prefer timetable 2";
+
+    buttonHolder.appendChild(buttonOne);
+    buttonHolder.appendChild(buttonTwo);
+
+    document.body.appendChild(buttonHolder);
   });
