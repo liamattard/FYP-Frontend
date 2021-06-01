@@ -9,8 +9,9 @@
             <stop stop-color="#0269FD" offset="2.91250472%"></stop>
             <stop stop-color="#0369FC" offset="4.5053357%"></stop>
             <stop stop-color="#0468FB" offset="6.00516035%"></stop>
-            <stop stop-color="#1165EF" offset="25.4821693%"></stop>
-            <stop stop-color="#4457C0" offset="100%"></stop>
+            <stop stop-color="#85DCBA" offset="25.4821693%"></stop>
+            <stop stop-color="#41B3A3" offset="100%"></stop>
+            <!--<stop stop-color="#7385AE" offset="100%"></stop>-->
         </radialGradient>
     </defs>
     <g id="Ressource" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

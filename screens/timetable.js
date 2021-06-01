@@ -8,7 +8,9 @@ if (moderation == null || days == null || id == null) {
 }
 
 let loading_bar = document.createElement("img");
-loading_bar.src = "https://media0.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif";
+loading_bar.style.height = "60px";
+loading_bar.src =
+  "https://www.superiorlawncareusa.com/wp-content/uploads/2020/05/loading-gif-png-5.gif";
 let loading_text = document.createElement("div");
 loading_text.innerHTML = "Generating Your Activity Plans!";
 document.body.appendChild(loading_bar);
@@ -35,6 +37,9 @@ function add_days(days_tab, plan) {
       place.className = "place";
       place.innerHTML = plan[i - 1][j];
       day_content.appendChild(place);
+      arrow = document.createElement("div");
+      arrow.innerHTML = "↓";
+      day_content.appendChild(arrow);
     }
     document.body.appendChild(day_content);
 

@@ -1,11 +1,17 @@
 * {
   font-family: "Open Sans";
-  font-weight: lighter;
+  font-weight: bold;
+    color: white;
 }
 
 html {
-  /* background: #ece9e9;
-  background: linear-gradient(to bottom right, #e0e9e9 5vmin, #f8f0f0 calc(50% - 10vmin), #f8f0e0 calc(50% + 10vmin), #ece9e9 calc(100% - 10vmin)) 0 0/ 100% 100vh fixed; */
+  background: #41B3A3;
+   /*background: #ece9e9;*/
+  /*background: linear-gradient(to bottom right, #e0e9e9 5vmin, #f8f0f0 calc(50% - 10vmin), #f8f0e0 calc(50% + 10vmin), #ece9e9 calc(100% - 10vmin)) 0 0/ 100% 100vh fixed; */*/
+}
+
+h1{
+  font-weight: bold;
 }
 
 body {
@@ -70,7 +76,7 @@ body {
 
 .place {
   text-align: center;
-  padding: 30px;
+  padding: 10px;
 }
 /*.days_content {*/
 /*[>text-align: center;<]*/
