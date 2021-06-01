@@ -24,7 +24,13 @@
       <div class="container" style="height: 500px;">
         <div class="row">
           <div class="col-xs-12">
-            <h3 style="margin-top: 200px;">Step 2:</h3>
+            <p class="description">
+              Please connect your Instagram profile to allow for more accurate
+              results.
+            </p>
+            <br />
+
+            <h3 style="margin-top: 0px;">Step 2:</h3>
             <button
               id="submit"
               onclick="instaFunction()"
@@ -64,7 +70,7 @@
       function noInstaFunction() {
         if (user_id != null) {
           window.location.href =
-            "https://liamattard.xyz:8888/screens/loading.html?id=" + user_id;
+            "https://www.touristplanner.xyz/screens/loading.html?id=" + user_id;
         }
       }
     </script>
