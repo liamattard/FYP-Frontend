@@ -153,14 +153,19 @@ fetch("https://liamattard.xyz:8888/getItineraries?id=" + id)
 
     buttonOne = document.createElement("button");
     buttonOne.id = "timetableButton";
-    buttonOne.href =
-      "https://liamattard.xyz:8888/updateScore?choice=1&id=" + id;
+    buttonOne.onclick = function () {
+      window.location =
+        "https://liamattard.xyz:8888/updateScore?choice=1&id=" + id;
+    };
+
     buttonOne.innerHTML = "I prefer timetable 1";
 
     buttonTwo = document.createElement("button");
     buttonTwo.id = "timetableButton";
-    buttonTwo.href =
-      "https://liamattard.xyz:8888/updateScore?choice=2&id=" + id;
+    buttonTwo.onclick = function () {
+      window.location =
+        "https://liamattard.xyz:8888/updateScore?choice=2&id=" + id;
+    };
     buttonTwo.innerHTML = "I prefer timetable 2";
 
     buttonHolder.appendChild(buttonOne);
