@@ -1,0 +1,80 @@
+* {
+  font-family: "Open Sans";
+  color: black;
+}
+
+html {
+  background: linear-gradient(to right, white, #f9f9f9);
+}
+
+h1 {
+  font-weight: 600;
+  color: #41b4a3;
+}
+
+h2 {
+  font-weight: 600;
+  color: gray;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+.malta_logo {
+  width: 40px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  height: 70px;
+  margin: 15px;
+  width: 400px;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3), 0 20px 40px rgba(0, 0, 0, 0.22);
+}
+
+.item {
+  display: inline-block;
+  top: 30%;
+  position: relative;
+  padding-left: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    width: 300px;
+  }
+}
+
+ul {
+  display: inline-block;
+  border-left: 1px dashed #41b4a3;
+  padding: 0px;
+  left: 50%;
+  display: grid;
+  margin-right: 20px;
+}
+
+li {
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  background: #41b4a3;
+  margin-left: -5px;
+  margin-top: 35px;
+  color: white;
+}
+
+.firstDot {
+  margin-bottom: 0px;
+}
+
+.Day {
+  display: flex;
+}
+
+.DayItem {
+  flex-basis: 100px;
+}
