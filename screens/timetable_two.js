@@ -9,7 +9,7 @@ if (id == null || responseNumber == null) {
 }
 
 let title = document.getElementById("majorTitle");
-title.innerHTML += responseNumber + 1;
+title.innerHTML += parseInt(responseNumber) + 1;
 
 function updateScore() {
   let q1 = document.getElementById("q1");
