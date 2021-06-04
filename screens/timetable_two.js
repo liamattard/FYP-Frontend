@@ -27,7 +27,7 @@ function updateScore() {
           id;
       } else {
         window.location.href =
-          "https://www.touristplanner.xyz/fyp/FYP-Frontend/screens/thanks.html";
+          "https://www.touristplanner.xyz/screens/thanks.html";
       }
     } else {
       window.location.href = "www.touristplanner.xyz";
