@@ -8,6 +8,9 @@ if (id == null || responseNumber == null) {
   window.location.href = "https://www.touristplanner.xyz";
 }
 
+let title = document.getElementById("majorTitle");
+title.innerHTML += responseNumber + 1;
+
 function updateScore() {
   let q1 = document.getElementById("q1");
   let q2 = document.getElementById("q2");
