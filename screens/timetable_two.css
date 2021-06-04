@@ -32,29 +32,24 @@ body {
   height: 70px;
   margin: 15px;
   width: 400px;
-  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3), 0 20px 40px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0), 0 20px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
 }
 
 .item {
   display: inline-block;
-  top: 30%;
+  /*top: 30%;*/
   position: relative;
   padding-left: 50px;
-}
-
-@media only screen and (max-width: 768px) {
-  .card {
-    width: 300px;
-  }
 }
 
 ul {
   display: inline-block;
   border-left: 1px dashed #41b4a3;
   padding: 0px;
-  left: 50%;
   display: grid;
   margin-right: 20px;
+  margin-left: 10px;
 }
 
 li {
@@ -63,12 +58,13 @@ li {
   border-radius: 20px;
   background: #41b4a3;
   margin-left: -5px;
-  margin-top: 30px;
+  margin-top: 40px;
+  margin-bottom: 0px;
   color: white;
 }
 
 .firstDot {
-  margin-bottom: 0px;
+  margin-top: 40px;
 }
 
 .Day {
@@ -77,4 +73,46 @@ li {
 
 .DayItem {
   flex-basis: 100px;
+}
+
+.emoji {
+  width: 40px;
+  height: 40px;
+  margin-top: 18px;
+}
+
+.placeTitle {
+  margin-top: 22px;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    width: 300px;
+  }
+
+  .placeTitle {
+    font-size: 0.7em;
+  }
+}
+.dayTag {
+  font-size: 1em;
+}
+
+form {
+  text-align: center;
+  font-size: 25px;
+}
+
+select {
+  text-align: center;
+  font-size: 25px;
+}
+
+button {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
