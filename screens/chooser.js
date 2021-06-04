@@ -78,8 +78,9 @@ function letsGo() {
     })
     .then((data) => {
       let final_site =
-        "https://www.touristplanner.xyz/screens/timetable.html?id=";
+        "https://www.touristplanner.xyz/screens/timetable_two.html?id=";
       final_site += id;
+      final_site += "&response=0";
       final_site += "&moderation=" + slider.value;
       final_site += "&days=" + slider_two.value;
       window.location.replace(final_site);

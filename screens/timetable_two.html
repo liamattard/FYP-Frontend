@@ -24,130 +24,60 @@
 
   <body>
     <h1>Trip to Malta</h1>
-
     <img
       class="malta_logo"
       src="https://images.emojiterra.com/twitter/512px/1f1f2-1f1f9.png"
     />
+    <p style="text-align: center;">
+      IMP!! After looking at the timetable, answer the questions at the bottom
+      of the page and hit next.
+    </p>
 
-    <h2>Day 1</h2>
-    <div class="Day">
-      <ul class="DayItem">
-        <li class="firstDot"></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+    <div style="text-align:center" id = "loading">
 
-      <div class="DayItem">
-        <h2 class="dayTag">
-          Morning
-        </h2>
-        <div class="card">
-          <img class="item emoji" src="../assets/emojis/beach.png" />
-          <div class="item placeTitle">Gnejna Beach</div>
-        </div>
-        <div class="card">
-          <img class="item emoji" src="../assets/emojis/nature.png" />
-          <div class="item placeTitle">Gnien tal Argotti</div>
-        </div>
-        <div class="card">
-          <img class="item emoji" src="../assets/emojis/museums.png" />
-          <div class="item placeTitle">National Museum</div>
-        </div>
-        <div class="card">
-          <img class="item emoji" src="../assets/emojis/hotel.png" />
-          <div class="item placeTitle">Rest at Hotel</div>
-        </div>
-        <h2 class="dayTag">
-          Evening
-        </h2>
-        <div class="card">
-          <img class="item emoji" src="../assets/emojis/bar.png" />
-          <div class="item placeTitle">Zmerc Pub</div>
-        </div>
-      </div>
-    </div>
-    <h2>Day 2</h2>
-    <div class="Day">
-      <ul class="DayItem">
-        <li class="firstDot"></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-
-      <div class="DayItem">
-        <h2 class="dayTag">
-          Morning
-        </h2>
-        <div class="card">
-          <img class="item emoji" src="../assets/emojis/beach.png" />
-          <div class="item placeTitle">Gnejna Beach</div>
-        </div>
-        <div class="card">
-          <img class="item emoji" src="../assets/emojis/nature.png" />
-          <div class="item placeTitle">Gnien tal Argotti</div>
-        </div>
-        <div class="card">
-          <img class="item emoji" src="../assets/emojis/museums.png" />
-          <div class="item placeTitle">National Museum</div>
-        </div>
-        <div class="card">
-          <img class="item emoji" src="../assets/emojis/hotel.png" />
-          <div class="item placeTitle">Rest at Hotel</div>
-        </div>
-        <h2 class="dayTag">
-          Evening
-        </h2>
-        <div class="card">
-          <img class="item emoji" src="../assets/emojis/bar.png" />
-          <div class="item placeTitle">Zmerc Pub</div>
-        </div>
-      </div>
+        <h2> Loading...</h2>
+        <img style = "width:80px"src = "https://i.pinimg.com/originals/5c/87/9a/5c879ab8cba794923686df4b950f497b.gif">
     </div>
 
-
-
-    
-    <h1>Survey</h1>
 
     <div id="survey">
+    <h1>Survey</h1>
+        <label for="q1"
+          >1) How satisfied are you with the generated itinerary with respect to
+          your personal preferences?</label
+        >
+        <br />
+        <br />
+        <select name="q1" id="q1">
+          <option value="4">Very Personalised</option>
+          <option value="3">Quite Personalised</option>
+          <option value="2">Not Very Personalised</option>
+          <option value="1">Not Personalised</option>
+        </select>
+        <br />
+        <br />
+        <br />
 
-    <form action="#" id="survey-form">
-      <label for="q1">1) How satisfied are you with the generated itinerary with respect to your personal preferences?</label>
-      <br>
-      <br>
-      <select name="q2" id="satisfaction">
-        <option value="very-satisfied">Very satisfied</option>
-        <option value="satisfied">Satisfied</option>
-        <option value="not-very-satisfied">Not very satisfied</option>
-        <option value="unsatisfied">Unsatisfied</option>
-      </select>
-      <br>
-      <br>
-      <br>
+        <label for="q2"
+          >2) Overall, how satisfied are you with the generated
+          itinerary?</label
+        >
+        <br />
+        <br />
+        <select name="q2" id="q2">
+          <option value="4">Very satisfied</option>
+          <option value="3">Satisfied</option>
+          <option value="2">Not very satisfied</option>
+          <option value="1">Unsatisfied</option>
+        </select>
 
+        <br />
+        <br />
 
-    <form action="#" id="survey-form">
-      <label for="q2">2) Overall, how satisfied are you with the generated itinerary?</label>
-      <br>
-      <br>
-      <select name="q2" id="satisfaction">
-        <option value="very-satisfied">Very satisfied</option>
-        <option value="satisfied">Satisfied</option>
-        <option value="not-very-satisfied">Not very satisfied</option>
-        <option value="unsatisfied">Unsatisfied</option>
-      </select>
+        <input onclick="updateScore()" type="submit" value="Next Page" />
+    </div">
 
-
+        <script src="timetable_two.js"></script>
     </div>
-
-    <button type="button">Next</button>
-
   </body>
 </html>

@@ -100,7 +100,7 @@ li {
   font-size: 1em;
 }
 
-form {
+#survey {
   text-align: center;
   font-size: 25px;
 }
@@ -110,7 +110,7 @@ select {
   font-size: 25px;
 }
 
-button {
+input {
   text-align: center;
   font-size: 25px;
   font-weight: 700;
